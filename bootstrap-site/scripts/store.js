@@ -1,0 +1,1 @@
+window.onload = () => document.getElementById('match').innerHTML = (document.getElementById('count').children.length);

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Store - Store</title>
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/media.css">
+</head>
+
+<body>
+
+    <noscript>Your browser doesn't support javascript...</noscript>
+
+    <!-- Scroll To Top Button-->
+    <a class="scroll_top" href="#target" title="Scroll to top">
+        <div id="scrollToTop" onmouseover="changePick('over')" onmouseout="changePick('out')">
+            <img id="pick" class="scroll_img" src="../images/guitar-pick.png" alt="pick" />
+        </div>
+    </a>
+    <!-- Header -->
+    <div class="container-fluid top_bar d-flex justify-content-center">
+        <div class="row-md-2 d-flex align-self-center">
+            <p class="number" onclick="copyTheNumber('+381641234567')" title="Click to copy...">Call us! +381 64 123
+                4567
+            </p>
+        </div>
+    </div>
+
+    <!-- Site name, search field and Sign in, location and theme buttons-->
+    <div id="target" class="container-fluid input_fields_div">
+        <div class="row d-flex justify-content-center">
+
+            <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+                <h1 class="site_header">Guitars</h1>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <div class="row input_div">
+                    <div class="col-12">
+                        <div class="search_div">
+                            <form action="/" method="GET" class="form">
+                                <input type="search" placeholder="Search keywords, catalog or item's ID..."
+                                    class="search_field" />
+                                <button type="submit" class="search_button">
+                                    <img src="../images/search.png" />
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="container-fluid">
+                    <div class="row sign_in_row">
+
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in">
+                                <a href="./sign_up/login.html">
+                                    <div class="row-sm-1 d-flex justify-content-center">
+                                        <img src="../images/account.png" class="account_sign_in" alt="login" />
+                                    </div>
+                                    <div class="row-sm-1 d-flex justify-content-center">
+                                        <p class="sign_text">Sign in</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in">
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <img src="../images/location.png" class="account_sign_in" alt="location" />
+                                </div>
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <p class="sign_text">Our Stores</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in" onclick="changeTheme()">
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <img src="../images/day.png" id="themeImg" class="account_sign_in" alt="theme" />
+                                </div>
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <p class="sign_text">Change Theme</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid menu_div">
+        <div class="row-md-12 row-sm-12 offset-lg-1">
+            <nav class="navbar navbar-expand-lg navbar-light navbar_">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav align-items-center navbar_links">
+                            <a class="nav-link" href="../index.html">Home</a>
+                            <a class="nav-link" href="#">Store</a>
+                            <a class="nav-link" href="./about_us.html">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Content -->
+    <div class="container-fluid content_container">
+
+        <!-- Store  -->
+        <div class="row d-flex justify-content-center home_div store_header_div">
+            <div class="col-lg-10 col-md-11 col-sm-12">
+                <h1>Store</h1>
+            </div>
+        </div>
+        <!-- Store items -->
+        <div class="row store_menu d-flex justify-content-center">
+            <div class="col-lg-2 store_details">
+                
+                <div class="row">
+                    <h3 class="store_details_title" onclick="storeDropDown(this)"><span class="sign">&#65291;</span>Brand</h3>
+                    <div class="container-fluid category_div">
+                        <ol class="category_list">
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Fender</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Squier</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Gibson</label>
+                            </li> 
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Epiphone</label>
+                            </li>                           
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="store_details_title" onclick="storeDropDown(this)"><span class="sign">&#65291;</span>Colour</h3>
+                    <div class="container-fluid category_div">
+                        <ol class="category_list">
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Black</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">White</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Red</label>
+                            </li> 
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Tobacco Burst</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Gold</label>
+                            </li>   
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Sunburst</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Ebony</label>
+                            </li>                      
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="store_details_title" onclick="storeDropDown(this)"><span class="sign">&#65291;</span>Body</h3>
+                    <div class="container-fluid category_div">
+                        <ol class="category_list">
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Stratocaster</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Jaguar</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Mustang</label>
+                            </li> 
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Telecaster</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Explorer</label>
+                            </li>   
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">Les Paul</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">SG</label>
+                            </li>                      
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="store_details_title" onclick="storeDropDown(this)"><span class="sign">&#65291;</span>Pickups</h3>
+                    <div class="container-fluid category_div">
+                        <ol class="category_list">
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">SSS</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">HSS</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">HSH</label>
+                            </li> 
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">HH</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">HHH</label>
+                            </li>   
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">P90</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">SS</label>
+                            </li>                      
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 class="store_details_title" onclick="storeDropDown(this)"><span class="sign">&#65291;</span>Price</h3>
+                    <div class="container-fluid category_div">
+                        <ol class="category_list">
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">0.00 - 499.99 &euro;</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">500.00 - 999.99 &euro;</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">1000.00 - 1999.99 &euro;</label>
+                            </li> 
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">2000.00 - 2999.99 &euro;</label>
+                            </li>  
+                            <li>
+                                <input type="checkbox" class="chbox" /><label class="chbox_label">3000+ &euro; </label>
+                            </li>                       
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Guitars -->
+            <div class="col-lg-8 col-md-11 store_items">
+                <div class="container-fluid store_items_border">
+                    <div class="row">
+                        <div class="col-lg-2 matches align-items-center">
+                            <div class="row d-flex justify-content-center">
+                                <h5 id="match">0</h5>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <h5>Matches</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-flex justify-content-center align-items-center offset-lg-5">
+                            <h5 class="store_header"><span class="store_text">Display:</span> <span
+                                    class="store_btn btn_active" onclick="changeDisplay(this)">30</span> <span class="store_btn" onclick="changeDisplay(this)">60</span> <span
+                                    class="store_btn" onclick="changeDisplay(this)">90</span></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid store_items_catalog">
+                    <div class="row" id="count">
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <a href="./store/guitars/guitar_example.html">
+                                <div class="row store_item_image">
+                                    <img class="guitar_img" alt="guitar" src="../images/guitar_1.jpg" />
+                                </div>
+                                <div class="row store_item_name">
+                                    <p class="guitar_name">Fender Eric Clapton Stratocaster MN BLK</p>
+                                </div>
+                                <div class="row store_item_price">
+                                    <p class="guitar_price">2,296.29 &euro;</p>
+                                </div>
+                                <div class="row store_item_corr_price">
+
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_2.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender American Vintage '58 Telecaster MN 2TSB</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">2,083.25 &euro;</p>
+                            </div>
+                            <div class="row store_item_corr_price">
+
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_3.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender David Gilmour Signature Stratocaster (Black)</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">2,873.55 &euro;</span></p>
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">2,499.99 &euro;</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_4.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender Ritchie Blackmore Strat Scalloped RW OWT</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">1481.44 &euro;</span></p>
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">1399.99 &euro;</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_5.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender American Original '60s Jaguar RW 3TSB</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">2068.43 &euro;</p>
+                            </div>
+                    
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_6.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender Classic Player Jaguar Special RW CAR</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">1112.03 &euro;</span></p>
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">999.99 &euro;</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                        <div class="row store_item_image">
+                            <img class="guitar_img" alt="guitar" src="../images/guitar_7.jpg" />
+                        </div>
+                        <div class="row store_item_name">
+                            <p class="guitar_name">Fender American Performer Mustang RW 3TSB</p>
+                        </div>
+                        <div class="row store_item_price">
+                            <p class="guitar_price">1222.22 &euro;</p>
+                        </div>
+                        
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_8.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender Traditional 70s Mustang Matching Head (Candy Apple Red)</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">1046.32 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_9.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender GE Smith Telecaster MN HBL</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">2490.84 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_10.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender Classic Player Baja Telecaster® MN BLK</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">975.35 &euro;</span></p>
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">874.99 &euro;</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_11.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Fender Dave Murray Stratocaster MN BLK</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">2222.22 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_12.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson Les Paul X Trans Ebony</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">3076.82 &euro;</span></p>
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">2999.99 &euro;</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_13.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson SG Supra Antique Natura</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">3675.21 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_14.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson SG Tribute Future Min-ETune Ebony Vintage Gloss</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">954.70 &euro;</span></p> 
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">849.99 &euro;</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_15.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson SG Deluxe Orange burst</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">2025.64 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_16.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson N-225 Heritage Cherry Vintage Gloss</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">1475.21 &euro;</p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_17.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson LP Supreme Translucent Ebony</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">3290.59 &euro;</span></p> 
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">2999.99 &euro;</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_18.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Gibson LP 50's Tribute Vintage Sunburst Vintage Gloss</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">995.34 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_19.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Epiphone Ltd Ed Mayday Monster Les Paul Standard Outfit</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price"><span class="strike">957.60 &euro;</span></p>
+                            </div>
+                            <div class="row store_item_corr_price">
+                                <p class="guitar_price">699.99 &euro;</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_20.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Epiphone Prophecy Les Paul Custom Plus EX Outfit (EMG 81/85) Heritage Cherry Sunburst Gold</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">995.34 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_21.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Epiphone 1984 EXPLORER EX (EMG-81/85) EBONY</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">699.99 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_22.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Squier By Fender Classic Vibe Stratocaster® '60s RW 3TS</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">487.17 &euro;</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_23.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Squier By Fender Classic Vibe Stratocaster® '50s MN OWT</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">410.25 &euro;</p>
+                            </div>
+                            
+                        </div>
+                    
+                        <div class="col-lg-3 col-md-4 col-sm-6 store_item_guitar">
+                            <div class="row store_item_image">
+                                <img class="guitar_img" alt="guitar" src="../images/guitar_24.jpg" />
+                            </div>
+                            <div class="row store_item_name">
+                                <p class="guitar_name">Squier By Fender Vintage Modified Surf Stratocaster® RW SNB</p>
+                            </div>
+                            <div class="row store_item_price">
+                                <p class="guitar_price">395.72 &euro;</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Us Now button -->
+        <div class="row d-flex justify-content-center bot_bar bot_bar_store">
+            <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="row-3 d-flex justify-content-center">
+                    <h3 class="bot_header">Join Us Now!</h3>
+                </div>
+                <div class="row-3 d-flex justify-content-center">
+                    <form action="/" method="GET" class="form">
+                        <input type="email" placeholder="john@example.com" class="email_field" />
+                        <button type="submit" class="email_button">Sign up</button>
+                    </form>
+                </div>
+        
+            </div>
+        </div>
+        
+        <!-- Bottom Content -->
+        <div class="row d-flex justify-content-center bot_content">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <div class="row-4">
+                            <div class="row">
+                                <h3 class="bot_h">Other Ways to Contact Us</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../images/fb.png" alt="FB" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Facebook</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../images/ig.png" alt="IG" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Instagram</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img tw" src="./../images/tw.jpg" alt="TW" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Twitter</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../images/email.png" alt="EM" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Email</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <div class="row-4">
+                            <div class="col">
+                                <div class="row">
+                                    <h3 class="bot_h">Contact Our Support</h3>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="feedback_div">
+                                        <a href="./contact_us.html">Send Message</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row d-flex justify-content-center align-items-center footer">
+            <div class="col-6">
+                <p class="footer_text">Copyright ©2021 Guitar Store Inc.</p>
+            </div>
+            <div class="col-6">
+                <p class="footer_text">Development and Design: J. Isailovic</p>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/store.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

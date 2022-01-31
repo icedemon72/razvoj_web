@@ -1,0 +1,94 @@
+@media screen and (max-width: 575px) {
+    .block, .content_div {
+        display: none;
+    }
+    .sign_in_row div {
+        margin-top: 10px;
+        background-color: #e4e4e4;
+    }
+    .sign_in_row:last-child {
+        margin-bottom: 10px;
+    }
+    .contact_img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    .guitar_store_img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .content-details h3 {
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.1em;
+        text-transform: uppercase;
+    }
+    
+    .content-details p {
+        color: #fff;
+        font-size: 0.7em;
+    }
+
+    .content-overlay, .content-image, .content_div {
+        height: 200px;
+    }
+    .content:hover .details-left {
+        top: 16%;
+        left: 50%;
+        opacity: 1;
+    }
+    .img_text {
+        display: none;
+    }
+    .add_to_cart_btn {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sign_in_row {
+        margin-top: 10px;
+    }
+    .contact_img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar_ a {
+        width: 100%;
+        text-align: center;
+    }
+    .store_header {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .content-overlay, .content-image, .content_div {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1197px) {
+    .store_details, .store_text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1405px) {
+    .category_list > li {
+        font-size: 12px;
+    }
+    .about_image {
+        width: 100%;
+        height: 300px;
+    }
+}
+

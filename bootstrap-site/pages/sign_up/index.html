@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guitar Store - Sign Up</title>
+        <link rel="shortcut icon" href="../../images/favicon.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="../../style/bootstrap.min.css">
+        <link rel="stylesheet" href="../../style/style.css">
+        <link rel="stylesheet" href="../../style/media.css">
+</head>
+    
+<body>
+
+    <noscript>Your browser doesn't support javascript...</noscript>
+
+    <!-- Scroll To Top Button-->
+    <a class="scroll_top" href="#target" title="Scroll to top">
+        <div id="scrollToTop" onmouseover="changePick('over')" onmouseout="changePick('out')">
+            <img id="pick" class="scroll_img" src="../../images/guitar-pick.png" alt="pick" />
+        </div>
+    </a>
+    <!-- Header -->
+    <div class="container-fluid top_bar d-flex justify-content-center">
+        <div class="row-md-2 d-flex align-self-center">
+            <p class="number" onclick="copyTheNumber('+381641234567')" title="Click to copy...">Call us! +381 64 123
+                4567
+            </p>
+        </div>
+    </div>
+
+    <!-- Site name, search field and Sign in, location and theme buttons-->
+    <div id="target" class="container-fluid input_fields_div">
+        <div class="row d-flex justify-content-center">
+
+            <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+                <h1 class="site_header">Guitars</h1>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <div class="row input_div">
+                    <div class="col-12">
+                        <div class="search_div">
+                            <form action="/" method="GET" class="form">
+                                <input type="search" placeholder="Search keywords, catalog or item's ID..."
+                                    class="search_field" />
+                                <button type="submit" class="search_button">
+                                    <img src="../../images/search.png" />
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="container-fluid">
+                    <div class="row sign_in_row">
+
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in">
+                                <a href="./login.html">
+                                    <div class="row-sm-1 d-flex justify-content-center">
+                                        <img src="../../images/account.png" class="account_sign_in" alt="login" />
+                                    </div>
+                                    <div class="row-sm-1 d-flex justify-content-center">
+                                        <p class="sign_text">Sign in</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in">
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <img src="../../images/location.png" class="account_sign_in" alt="location" />
+                                </div>
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <p class="sign_text">Our Stores</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in" onclick="changeTheme()">
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <img src="../../images/day.png" id="themeImg" class="account_sign_in" alt="theme" />
+                                </div>
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <p class="sign_text">Change Theme</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid menu_div">
+        <div class="row-md-12 row-sm-12 offset-lg-1">
+            <nav class="navbar navbar-expand-lg navbar-light navbar_">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav align-items-center navbar_links">
+                            <a class="nav-link" href="../../index.html">Home</a>
+                            <a class="nav-link" href="./../store.html">Store</a>
+                            <a class="nav-link" href="./../about_us.html">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Content  -->
+    <div class="container-fluid content_container">
+        <div class="container">
+            <div class=" text-center mt-5 ">
+                <h1>Sign Up</h1>
+            </div>
+        
+            <div class="row">
+                <div class="col-lg-7 mx-auto">
+                    <div class="card mt-2 mx-auto p-4 contact_card">
+                        <div class="card-body contact_card">
+                            <div class="container">
+                                <form id="contact-form" role="form">
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group"> <label for="form_name">Firstname</label> <input
+                                                        id="form_name" type="text" name="name" class="form-control"
+                                                        required="required"
+                                                        data-error="Firstname is required."> </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group"> <label for="form_lastname">Lastname</label> <input
+                                                        id="form_lastname" type="text" name="surname" class="form-control"
+                                                        required="required"
+                                                        data-error="Lastname is required."> </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group"> <label for="form_email">Username</label> <input
+                                                        id="form_username" type="text" name="username" class="form-control"
+                                                        required="required"
+                                                        data-error="Valid email is required."> </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group"> <label for="form_email">Email</label> <input
+                                                        id="form_email" type="email" name="email" class="form-control"
+                                                        required="required"
+                                                        data-error="Valid email is required."> </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group"> <label for="form_email">Password</label> <input
+                                                        id="form_password" type="password" name="password" class="form-control"
+                                                        required="required"
+                                                        data-error="Valid email is required."> </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group"> <label for="form_email">Confirm Password</label> <input
+                                                        id="form_confirmpassword" type="password" name="c_password" class="form-control"
+                                                        required="required"
+                                                        data-error="Valid email is required."> </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12"> <input type="submit" class="btn btn-send pt-2 btn-block contact_btn" value="Sign up!">
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 sign_up_text">
+                                                <p>Already have an account? <a href="./login.html">Click here to sign in!</a></p>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Join Us Now button -->
+        <div class="row d-flex justify-content-center bot_bar bot_bar_store">
+            <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="row-3 d-flex justify-content-center">
+                    <h3 class="bot_header">Join Us Now!</h3>
+                </div>
+                <div class="row-3 d-flex justify-content-center">
+                    <form action="/" method="GET" class="form">
+                        <input type="email" placeholder="john@example.com" class="email_field" />
+                        <button type="submit" class="email_button">Sign up</button>
+                    </form>
+                </div>
+        
+            </div>
+        </div>
+        
+        <!-- Bottom Content -->
+        <div class="row d-flex justify-content-center bot_content">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <div class="row-4">
+                            <div class="row">
+                                <h3 class="bot_h">Other Ways to Contact Us</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../../images/fb.png" alt="FB" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Facebook</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../../images/ig.png" alt="IG" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Instagram</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img tw" src="./../../images/tw.jpg" alt="TW" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Twitter</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../../images/email.png" alt="EM" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Email</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <div class="row-4">
+                            <div class="col">
+                                <div class="row">
+                                    <h3 class="bot_h">Contact Our Support</h3>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="feedback_div">
+                                        <a href="./../contact_us.html">Send Message</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row d-flex justify-content-center align-items-center footer">
+            <div class="col-6">
+                <p class="footer_text">Copyright ©2021 Guitar Store Inc.</p>
+            </div>
+            <div class="col-6">
+                <p class="footer_text">Development and Design: J. Isailovic</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./../../scripts/index.js"></script>
+    <script src="./../../scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Store - Gibson&reg; Guitars</title>
+    <link rel="shortcut icon" href="./../../../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../../../style/style.css">
+    <link rel="stylesheet" href="../../../style/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <noscript>Your browser doesn't support javascript...</noscript>
+
+    <!-- Scroll To Top Button-->
+    <a class="scroll_top" href="#target" title="Scroll to top">
+        <div id="scrollToTop" onmouseover="changePick('over')" onmouseout="changePick('out')">
+            <img id="pick" class="scroll_img" src="./../../../images/guitar-pick.png" alt="pick" />
+        </div>
+    </a>
+    
+    <!-- Header -->
+    <div class="container-fluid top_bar d-flex justify-content-center">
+        <div class="row-md-2 d-flex align-self-center">
+            <p class="number" onclick="copyTheNumber('+381641234567')" title="Click to copy...">Call us! +381 64 123
+                4567</p>
+        </div>
+    </div>
+    
+    <!-- Site name, search field and Sign in, location and theme buttons-->
+    <div id="target" class="container-fluid input_fields_div">
+        <div class="row d-flex justify-content-center">
+    
+            <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+                <h1 class="site_header">Guitars</h1>
+            </div>
+    
+            <div class="col-md-6 col-sm-12">
+                <div class="row input_div">
+                    <div class="col-12">
+                        <div class="search_div">
+                            <form action="/" method="GET" class="form">
+                                <input type="search" placeholder="Search keywords, catalog or item's ID..."
+                                    class="search_field" />
+                                <button type="submit" class="search_button">
+                                    <img src="./../../../images/search.png" />
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-12">
+                <div class="container-fluid">
+                    <div class="row sign_in_row">
+    
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <a href="./../../sign_up/login.html">
+                                <div class="col-fluid sign_in">
+                                    <div class="row-sm-1 d-flex justify-content-center">
+                                        <img src="./../../../images/account.png" class="account_sign_in" alt="login" />
+                                    </div>
+                                    <div class="row-sm-1 d-flex justify-content-center">
+                                        <p class="sign_text">Sign in</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in">
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <img src="./../../../images/location.png" class="account_sign_in" alt="location" />
+                                </div>
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <p class="sign_text">Our Stores</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-4 col-sm-4">
+                            <div class="col-fluid sign_in" onclick="changeTheme()">
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <img src="./../../../images/day.png" id="themeImg" class="account_sign_in" alt="theme" />
+                                </div>
+                                <div class="row-sm-1 d-flex justify-content-center">
+                                    <p class="sign_text">Change Theme</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!-- Navbar -->
+    <div class="container-fluid menu_div">
+        <div class="row-md-12 row-sm-12 offset-lg-1">
+            <nav class="navbar navbar-expand-lg navbar-light navbar_">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav align-items-center navbar_links">
+                            <a class="nav-link" href="./../../../index.html">Home</a>
+                            <a class="nav-link" href="./../../store.html">Store</a>
+                            <a class="nav-link" href="./../../about_us.html">About Us</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Content-->
+    <div class="container-fluid content_container">
+        
+        <!-- Text -->
+        <div class="row d-flex justify-content-center home_div">
+            <div class="col-lg-10 col-md-11 col-sm-12">
+                <h1>Something about <span class="gibson">Gibson</span></h1>
+                <p class="content_text">Discover the right guitar for you at our store. We are home to a large collection of electric, acoustic and bass guitars, amplifiers, keyboards, microphones and more. We have 10 stores across the Europe, and we offer the fastest and easiest way to find all you need inone place. If you are worried about shipping cost, we offer free shipping on many items from ourcollection no matter where you are from. 
+
+Here you are sure to find the best gear at the lowest price and due to our wonderful and skillful staff, you are guaranteed to have a nice and enjoyable experience while shopping at our centers.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nisi dolor. Donec quis nunc finibus ligula finibus pulvinar quis feugiat justo. Aenean suscipit eros et vehicula ornare. Pellentesque scelerisque, nisi et tempus pulvinar, lectus ligula pulvinar lacus, vel luctus ex enim sit amet est. Praesent quis fringilla erat, scelerisque imperdiet urna. Duis vel turpis vel nisi imperdiet aliquam. Nam viverra velit nec libero gravida, cursus eleifend libero rutrum. Phasellus ornare elementum turpis, eu pellentesque risus congue a.
+
+Mauris malesuada feugiat velit, sed ullamcorper leo iaculis ut. Vivamus pellentesque leo a elit imperdiet, vel eleifend metus ornare. Aenean ac ligula ac purus facilisis sagittis eget non sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus iaculis, porttitor arcu eget, molestie quam. Cras euismod ultricies ipsum, in fringill lorem lobortis at. In tristique dolor id pellentesque rutrum. Proin posuere sagittis leo, in tincidunt risus aliquam a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque vel massa at sem imperdiet sagittis. Vivamus tellus nulla, porttitor a ex eu, suscipit pretium lorem. In tincidunt, lacus gravida volutpat gravida, mi urna facilisis felis, at faucibus elit nibh in nisl. In bibendum velit vitae est vehicula.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nisi dolor. Donec quis nunc finibus ligula finibus pulvinar quis feugiat justo. Aenean suscipit eros et vehicula ornare. Pellentesque scelerisque, nisi et tempus pulvinar, lectus ligula pulvinar lacus, vel luctus ex enim sit amet est. Praesent quis fringilla erat, scelerisque imperdiet urna. Duis vel turpis vel nisi imperdiet aliquam. Nam viverra velit nec libero gravida, cursus eleifend libero rutrum.
+
+Phasellus ornare elementum turpis, eu pellentesque risus congue a.
+
+Mauris malesuada feugiat velit, sed ullamcorper leo iaculis ut. Vivamus pellentesque leo a elit imperdiet, vel eleifend metus ornare. Aenean ac ligula ac purus facilisis sagittis eget non sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus iaculis, porttitor arcu eget, molestie quam. Cras euismod ultricies ipsum, in fringill lorem lobortis at. In tristique dolor id pellentesque rutrum. Proin posuere sagittis leo, in tincidunt risus aliquam a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque vel massa at sem imperdiet sagittis. Vivamus tellus nulla, porttitor a ex eu, suscipit pretium lorem. In tincidunt, lacus gravida volutpat gravida, mi urna facilisis felis, at faucibus elit nibh in nisl. In bibendum velit vitae est vehicula.
+                </p>
+            </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="row d-flex justify-content-center car_div">
+            <div class="col-lg-5 col-md-9 col-sm-12">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./../../../images/gibson_1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./../../../images/gibson_2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./../../../images/gibson_3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev carousel_b" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden carousel_t">< Previous</span>
+                    </button>
+                    <button class="carousel-control-next carousel_b" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden carousel_t">Next ></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Join Us Now button -->
+        <div class="row d-flex justify-content-center bot_bar">
+            <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="row-3 d-flex justify-content-center">
+                    <h3 class="bot_header">Join Us Now!</h3>
+                </div>
+                <div class="row-3 d-flex justify-content-center">
+                    <form action="/" method="GET" class="form">
+                        <input type="email" placeholder="john@example.com" class="email_field" />
+                        <button type="submit" class="email_button">Sign up</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Content -->
+        <div class="row d-flex justify-content-center bot_content">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <div class="row-4">
+                            <div class="row">
+                                <h3 class="bot_h">Other Ways to Contact Us</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../../../images/fb.png" alt="FB" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Facebook</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../../../images/ig.png" alt="IG" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Instagram</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img tw" src="./../../../images/tw.jpg" alt="TW" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Twitter</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="row d-flex justify-content-center">
+                                        <img class="contact_img" src="./../../../images/email.png" alt="EM" />
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <p class="img_text">Email</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <div class="row-4">
+                            <div class="col">
+                                <div class="row">
+                                    <h3 class="bot_h">Contact Our Support</h3>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <div class="feedback_div">
+                                        <a href="./../../contact_us.html">Send Message</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row d-flex justify-content-center align-items-center footer">
+            <div class="col-6">
+                <p class="footer_text">Copyright ©2021 Guitar Store Inc.</p>
+            </div>
+            <div class="col-6">
+                <p class="footer_text">Development and Design: J. Isailovic</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./../../../scripts/index.js"></script>
+    <script src="./../../../scripts/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
