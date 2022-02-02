@@ -86,10 +86,12 @@ const app = Vue.createApp({
     methods: {
         answered(e) {
             this.selectedAnswer = e.target.value
-            if(this.selectedAnswer == this.questions[this.index]['correctAnswer'])
-                this.correctAnswer++
-            else
-                this.wrongAnswer++
+            if(this.selectedAnswer == this.questions[this.index]['correctAnswer']) {
+                this.correctAnswer++;
+            }
+            else {
+                this.wrongAnswer++;
+            }
         },
         nextQuestion() {
             this.indexCount++
