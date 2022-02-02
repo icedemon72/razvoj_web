@@ -92,6 +92,15 @@ input {
     color: #ba1425;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    color: #e8e6e3;
+    text-align: end;
+ }
+
 @media screen and (max-height: 418px) {
     #app {
         position: static;
@@ -99,5 +108,11 @@ input {
         height: auto;
         margin: auto;
         box-shadow: none;
+    }
+}
+
+@media screen and (max-height: 540px) {
+    .footer {
+        display: none;
     }
 }
