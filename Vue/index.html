@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js Quiz</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1 class="header">
+                Simple Quiz
+            </h1>
+            <div class="questions">
+                <div v-if="indexCount < count">
+                    <p classs="question_text">{{ indexCount + 1 }}/{{ count }}</p>
+                    <p class="question_text">
+                        Q: {{ questions[index]['question'] }}
+                    </p>
+                    <label :for="key" class="question_label" v-for="answer,key in questions[index]['answers']" :class="{'hover_ans' : selectedAnswer == ''},
+                        {'wrong' : selectedAnswer == key},
+                        {'corr' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}">
+                        <input type="radio" :id="key" class="hidden" :value="key" @change="answered($event)"
+                            v-model="selectedAnswer" :disabled="selectedAnswer != ''" />
+                        {{ answer }} <br />
+                    </label>
+                    <div>
+                        <button class="btn" v-show="selectedAnswer != '' && indexCount < count-1" @click="nextQuestion">
+                            &gt;
+                        </button>
+                        <button class="btn" v-show="selectedAnswer != '' && indexCount == count-1"
+                            @click="showResults">
+                            Finish
+                        </button>
+                    </div>
+                </div>
+                <div v-else>
+                    <h2 class="res_header">Results</h2>
+                    <div>
+                        <p>
+                            Correct Answers:
+                            <span class="corr_answer">{{ correctAnswer }}</span>
+                        </p>
+                        <p>
+                            Wrong Answers:
+                            <span class="wrong_answer">{{ wrongAnswer }}</span>
+                        </p>
+                    </div>
+                    <div>
+                        <button class="btn" @click="resetQuiz">
+                            Play again?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
