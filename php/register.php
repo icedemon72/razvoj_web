@@ -19,7 +19,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-7 mx-auto">
+				<div class="col-lg-7 mx-auto sign_form">
 					<div class="card mt-2 mx-auto p-4 contact_card">
 						<div class="card-body contact_card">
 							<div class="container">

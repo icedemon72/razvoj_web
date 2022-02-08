@@ -1,18 +1,33 @@
+body, .contact_card {
+	color: rgb(209, 205, 199) !important;
+	background-color: rgb(24, 26, 27) !important;
+}
+
+.sign_form {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.card {
+	border: 0 !important;
+}
+
 .error {
 	text-align: center;
 	color: #a71115;
 }
 
 .contact_btn {
-	background-color: #a71115;
-    color: #ffffff;
+	background-color: #a71115 !important;
+    color: #ffffff !important;
+	margin-top: 10px !important; 
+	margin-bottom: 10px !important;
 }
 
 .contact_btn:hover {
-    background-color: #c4363b;
-    color: #ffffff;
+    background-color: #c4363b !important;
+    color: #ffffff !important;
 }
 
 .bold {
-	font-weight: bold;
+	font-weight: bold !important;
 }
