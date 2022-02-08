@@ -1,0 +1,18 @@
+.error {
+	text-align: center;
+	color: #a71115;
+}
+
+.contact_btn {
+	background-color: #a71115;
+    color: #ffffff;
+}
+
+.contact_btn:hover {
+    background-color: #c4363b;
+    color: #ffffff;
+}
+
+.bold {
+	font-weight: bold;
+}
